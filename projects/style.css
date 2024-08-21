@@ -1,0 +1,250 @@
+/* this is some magical font-importing.  
+you'll learn about it later. */
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+/*header*/
+
+.header_container {
+  margin: 0;
+  background: #white;
+  font-family: Besley, serif;
+}
+
+.header_container .header {
+  background: #1f2937;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_container .links{
+    display: flex;
+    justify-content: right;
+    margin-right: 48px;
+}
+
+.header_container .logo {
+  color: white;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+  margin-left: 48px;
+}
+
+a {
+  /* this removes the line under our links */
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  flex: 1 1 0;
+  gap: 8px;
+}
+
+/*text with image*/
+html
+{
+	padding: 0 1em;
+	font-family: Calibri, sans-serif;
+}
+
+.cd__main{
+    max-width: 720px !important;
+}
+
+img
+{
+	       max-width: 220px;
+               height: auto;
+}
+
+.image-left, .image-right
+{
+	margin: 1em 0;
+}
+
+@media (min-width: 20em)
+{
+	.image-left, .image-right
+	{
+		display: flex;
+		align-items: center;
+    justify-content: space-evenly;
+	}
+
+	.image-left img
+	{
+
+		margin-right: 1em;
+		float: left; /* fallback */
+	}
+
+	.image-right img
+	{
+		order: 1;
+		margin-left: 1em;
+		float: right; /* fallback */
+	}
+	
+	/* clearfix for fallback */
+	.image-left::after,
+	.image-right::after
+	{
+		content: "";
+  	display: block;
+		clear: both;
+	}
+}
+
+@media (min-width: 30em)
+{
+	.image-left img, .image-right img
+	{
+		flex-shrink: 0;
+	}
+}
+
+/* make paragraph follow /n */
+p {
+  white-space: pre
+}
+
+/*information*/
+
+.information_container {
+    font-family: 'Courier New', Courier, monospace;
+}
+  
+img {
+    width: 100px;
+    height: 100px;
+}
+  
+.information_container .title {
+    font-size: 36px;
+    font-weight: 900;
+}
+  
+  /* do not edit this footer */
+.information_container .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+  
+  /* SOLUTION */
+  
+.information_container {
+    text-align: center;
+}
+  
+.information_container .title {
+    margin-bottom: 32px;
+}
+  
+.information_container .container1 {
+    display: flex;
+    justify-content: center;
+    gap: 52px;
+}
+
+.information_container .info {
+    max-width: 200px;
+}
+  
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #3882f6;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;  
+  }
+
+
+.information_container .quote_container{
+  background-color: #e5e7eb;
+}
+
+.information_container .quote {
+    text-align: left;
+    margin-top: 48px;
+    font-size: 36px;
+    margin-left: 48px;
+    margin-right: 48px;
+    white-space: pre;
+    font-weight: light;
+    font-style: italic;
+    color: #1f2937;
+}
+
+.information_container .quote_name {
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 600px;
+  white-space: pre;
+}
+
+/*modal*/
+
+.modal_container {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  background: white;
+  color: #333;
+  /* I'll give you this one for free */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: #3882f6;
+  width: 480px;
+  border-radius: 10px;
+}
+
+.signup-button {
+  background: royalblue;
+  border: 1px solid royalblue;
+  color: white;
+}
+
+/* SOLUTION: */
+
+
+.modal {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.icon {
+  /* this keeps the icon from getting smashed by the text */
+  flex-shrink: 0;
+}
+/* header container should be wrapped around the button element as well in order for flex style to work */
+
+
+.modal_container .header2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.modal_container .text {
+  margin-bottom: 16px;
+}
